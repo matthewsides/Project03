@@ -22,10 +22,10 @@ Project03 Breakdown | Tasks (Timed)
 
 	- If more than or less than 3 chars are put in an error should appear (string) (Time: 10 Min) (1 Min taken)
 
-	-The programs input should be limited to string, a program that rejects numerical values and/ or input (20 mins)
+	-The programs input should be limited to string, a program that rejects numerical values and/ or input (20 mins) (Took 30 Min though the second task was also completed simutaneously)
 		-for now nothing happens
 
-	-If Numerical values put in an error message or alert/ prompt should appear (Time: 10 Min)
+	-If Numerical values put in an error message or alert/ prompt should appear (Time: 10 Min) (completed with the above task, took 3 Mins)
 
 	-The program should compare the input with a preset word (compare chars). (Time: 15 Mins)
 
