@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <fstream> 
+#include <cmath>
+
+using namespace std;
+int main(){
+
+  string input = "";
+  cout<<"type in three characters";
+  // gets the input and creates a variable storing the input in said variable.
+  getline(cin,input);
+   
+
+  for(auto& i : input) // check each character in the input string
+  if(!isalpha(i)) // is it an alphabetical character?
+  {
+          
+                             // print an error to the user
+                cout << "Invalid input.  Please input only alphabetical characters." << endl;
+                break;              // break out of the for() loop, as we have already established the input is invalid
+            }
+            
+     int charlength = input.length();
+    
+{
+if (charlength !=3)
+  cout<<"Error characters are limited to 3";
+    else 
+    cout<<input; }
+cout << string(15, '\n');    
+
+
+ifstream infile;
+infile.open("list.txt");
+
+//Check for errors
+if (infile.fail()) {
+  cerr<<"Error Opening File"<<endl;
+  exit(1);
+}
+
+string fileinput;
+
+while  (!infile.eof()){
+  infile>>fileinput;
+  if (fileinput == input)
+    cout<< fileinput<<endl;
+ if (fileinput < input) 
+    cout<<"no words found";
+  return 0; 
+
+  
+  
+}
+
+}
+
