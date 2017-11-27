@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <fstream> 
+#include <cmath>
+#include <map>
+
+using namespace std;
+int main(){
+  //int isalpha;
+  int countvalue=0;
+  int prevvalue;
+   //map<char, int> duplicateChar; 
+  string input = "";
+  cout<<"type in three characters";
+  // gets the input and creates a variable storing the input in said variable.
+  getline(cin,input);
+   
+  for(auto& i : input) // check each character in the input string
+  while(!isalpha(i) || input.length() > 4) // is it an alphabetical character?
+   {
+   cout << "Invalid input. Try again";
+   cout << string(15, '\n');   
+   getline(cin,input);
+     
+    }
+            
+   
+
+ifstream infile;
+infile.open("list.txt");
+
+//Check for errors
+if (infile.fail()) {
+  cerr<<"Error Opening File"<<endl;
+  exit(1);
+}
+
+string fileinput;
+
+while  (!infile.eof()){
+  infile>>fileinput;
+
+for(int i=0; i<input.length(); i++){ //for each letter in the input
+  for(int j=0; j<fileinput.length(); j++){ // for each letter in a line
+   if(input[i] == fileinput[j]){
+    // duplicateChar[input[fileinput]]++;
+     //  if(duplicateChar[input[fileinput]] == 1){ 
+       countvalue ++;
+       cout<<countvalue;
+//       //count similar letter
+//       //maximum counter
+   }
+   
+  }
+ 
+}
+
+ if(countvalue > prevvalue){
+     prevvalue = countvalue; 
+     //answer = fileinput
+  } 
+ 
+} }
+//}
